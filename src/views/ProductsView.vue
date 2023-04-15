@@ -2,6 +2,7 @@
 import {onMounted, ref, watch} from 'vue'
 import {useRoute} from 'vue-router'
 import axios from 'axios'
+import cartMethods from "@/utils/cart";
 
 const isLoaded = ref(false)
 const products = ref([])
@@ -35,9 +36,9 @@ onMounted(async () => {
 </script>
 
 <template>
-    <h1>Products</h1>
+    <h1 class="my-5">Products</h1>
     <div class="container">
-        <div class="dropdown d-flex justify-content-end my-2">
+        <div class="dropdown d-flex justify-content-end my-5">
             <a
                     class="btn btn-secondary dropdown-toggle"
                     href="#"
@@ -70,11 +71,16 @@ onMounted(async () => {
             >
                 <RouterLink :to="'products/' + product.id">
                     <img :src="product.image" class="card-img-top" :alt="product.title"/>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ product.title }}</h5>
-                        <p class="card-text">{{ product.price }}</p>
-                    </div>
                 </RouterLink>
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.title }}</h5>
+                    <p class="card-text">{{ product.price }}</p>
+                    <button class="btn btn-primary" @click="cartMethods.addToCart(product)">
+                        Add to cart
+                    </button>
+                </div>
+
             </div>
             <nav class="py-4" aria-label="Page navigation example">
                 <ul class="pagination">

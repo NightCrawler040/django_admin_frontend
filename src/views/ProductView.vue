@@ -18,18 +18,35 @@
 </script>
 
 <template>
-    <div class="container-sm sticky-sm-top" style="width: 17%"><img :src="product.image" class="card-img-top" :alt="product.title"></div>
-            <div class="card-body">
-                <h5 class="card-title">{{ product.title }}</h5>
-                <p class="card-text">{{ product.price }}</p>
-            </div>
+    <h1>Product </h1>
+    <div v-if="isLoaded" >
+        <div class="card-body position-absolute top-1 end-0">
+            <h2>{{ product.title }}</h2>
+            <h4><b>{{product.price}}₸</b></h4>
+        </div>
+    </div>
+
+    <div v-else>
+        ...loading
+    </div>
+
+    <div class="sticky-sm" style="width: 17%"><img :src="product.image" class="card-img-top" :alt="product.title"></div>
   <div>
-      <h1>Product</h1>
-      <div v-if="isLoaded">
-          <p>{{ product.title }}</p>
-      </div>
-      <div v-else>
-          ...loading
+      <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Описание
+                  </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      {{product.description}}
+                  </div>
+              </div>
+          </div>
       </div>
   </div>
+
+
 </template>

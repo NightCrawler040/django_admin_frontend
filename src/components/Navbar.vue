@@ -11,11 +11,8 @@
             role="img"
             aria-label="Bootstrap"
             fill="#ffffff"
-            version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 512 512"
-            enable-background="new 0 0 512 512"
             xml:space="preserve"
             stroke="#ffffff"
           >
@@ -44,9 +41,8 @@
                     </ul>
                 </div>
             </li>
-            <li><RouterLink to="/pricing" class="nav-link px-2 text-white">Pricing</RouterLink></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
           <li><RouterLink to="/about" class="nav-link px-2 text-white">About</RouterLink></li>
+            <li><RouterLink to="/cart" class="nav-link px-2 text-white">Cart</RouterLink></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -60,7 +56,7 @@
 
         <div class="text-end">
           <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-primary">Sign-up</button>
+          <button type="button" class="btn btn-primary">Sign-u p</button>
         </div>
       </div>
     </div>

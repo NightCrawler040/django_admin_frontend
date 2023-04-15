@@ -1185,6 +1185,11 @@
     "lodash" "^4.17.21"
     "semver" "^7.3.6"
 
+"vue-google-oauth2@^1.5.10":
+  "integrity" "sha512-0+ZGbauhkBhvTln2RPyeaSvRdrka194h+MeEQngy1H4UvGOC5hxRMB8QvUrVRP/w2Tt8/ByCqGDko6MuHpFpbQ=="
+  "resolved" "https://registry.npmjs.org/vue-google-oauth2/-/vue-google-oauth2-1.5.10.tgz"
+  "version" "1.5.10"
+
 "vue-router@^4.1.6":
   "integrity" "sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ=="
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-4.1.6.tgz"
